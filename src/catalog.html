@@ -12,11 +12,11 @@
 <body class="page">
   <header class="page-header">
     <nav class="main-nav main-nav--no-js">
-      <a class="main-nav__logo logo">
+      <a class="main-nav__logo header-logo" href="index.html" aria-label="Мишка">
         <picture>
           <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишка">
+          <img class="header-logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип сайта Мишка">
         </picture>
       </a>
 
@@ -55,7 +55,36 @@
 
   <main class="page-main"></main>
 
-  <footer class="page-footer"></footer>
+  <footer class="page-footer">
+    <div class="content-wrapper">
+      <a class="page-footer__logo footer-logo" aria-label="Мишка">
+        <svg class="footer-logo__image" width="102" height="34" alt="Логотип сайта Мишка">
+          <use xlink:href="img/symbols.svg#logo-footer"></use>
+        </svg>
+      </a>
+
+      <ul class="social-links">
+        <li class="social-links__item">
+          <a class="social-links__link" href="https://www.instagram.com" aria-label="Instagram"></a>
+        </li>
+        <li class="social-links__item">
+          <a class="social-links__link" href="https://www.facebook.com" aria-label="Facebook"></a>
+        </li>
+        <li class="social-links__item">
+          <a class="social-links__link" href="https://twitter.com" aria-label="Twitter"></a>
+        </li>
+      </ul>
+
+      <p class="page-footer__copyright">
+        <span class="page-footer__copyright-text">Разработано</span>
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
+          <svg class="page-footer__copyright-image" width="27" height="34" alt="Логотип HTML Academy">
+            <use xlink:href="img/symbols.svg#logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </p>
+    </div>
+  </footer>
 
   <div class="modal-form"></div>
 
