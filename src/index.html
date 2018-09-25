@@ -145,8 +145,8 @@
         </blockquote>
 
         <div class="reviews__navigation">
-          <button class="reviews__nav-button reviews__nav-button--prev" aria-label="Назад"></button>
-          <button class="reviews__nav-button reviews__nav-button--next" aria-label="Вперёд"></button>
+          <button class="reviews__nav-button reviews__nav-button--prev" type="button" aria-label="Назад"></button>
+          <button class="reviews__nav-button reviews__nav-button--next" type="button" aria-label="Вперёд"></button>
         </div>
 
         <a class="reviews__button button" href="#">Написать</a>
@@ -171,7 +171,7 @@
             <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/map-desktop@1x.webp 1x, img/content/map-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/content/map-tablet@1x.webp 1x, img/content/map-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/content/map-mobile@1x.webp 1x, img/content/map-mobile@2x.webp 2x">
-            <source media="(min-width: 1150px)" srcset="img/content/map-desktop@1x.jpg, img/content/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 1150px)" srcset="img/content/map-desktop@1x.jpg 1x, img/content/map-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/content/map-tablet@1x.jpg 1x, img/content/map-tablet@2x.jpg 2x">
             <img class="week-goods__image" src="img/content/map-mobile@1x.jpg" srcset="img/content/map-mobile@2x.jpg 2x"
               alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
@@ -190,7 +190,7 @@
   <footer class="page-footer">
     <div class="content-wrapper">
       <a class="page-footer__logo footer-logo" aria-label="Мишка">
-        <svg class="footer-logo__image" width="102" height="34" alt="Логотип сайта Мишка">
+        <svg class="footer-logo__image" width="102" height="34">
           <use xlink:href="img/symbols.svg#logo-footer"></use>
         </svg>
       </a>
@@ -210,7 +210,7 @@
       <p class="page-footer__copyright">
         <span class="page-footer__copyright-text">Разработано</span>
         <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
-          <svg class="page-footer__copyright-image" width="27" height="34" alt="Логотип HTML Academy">
+          <svg class="page-footer__copyright-image" width="27" height="34">
             <use xlink:href="img/symbols.svg#logo-htmlacademy"></use>
           </svg>
         </a>
@@ -226,13 +226,13 @@
 
       <input class="form-cart__radio visually-hidden" type="radio" id="size-s" name="size" value="1" checked>
       <label for="size-s" class="form-cart__label">S</label>
-      <input class="form-cart__radio visually-hidden" type="radio" id="size-m" name="size" value="1">
+      <input class="form-cart__radio visually-hidden" type="radio" id="size-m" name="size" value="2">
       <label for="size-m" class="form-cart__label">M</label>
-      <input class="form-cart__radio visually-hidden" type="radio" id="size-l" name="size" value="1">
+      <input class="form-cart__radio visually-hidden" type="radio" id="size-l" name="size" value="3">
       <label for="size-l" class="form-cart__label">L</label>
     </fieldset>
 
-    <button type="submit" class="form-cart__button button button--green">Добавить</button>
+    <button class="form-cart__button button button--green" type="submit">Добавить</button>
   </form>
 
   <div class="modal-overlay"></div>
