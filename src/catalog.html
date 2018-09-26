@@ -12,15 +12,17 @@
 <body class="page">
   <header class="page-header">
     <nav class="main-nav main-nav--no-js">
-      <a class="main-nav__logo header-logo" href="index.html" aria-label="Мишка">
-        <picture>
-          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="header-logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип сайта Мишка">
-        </picture>
-      </a>
+      <div class="main-nav__logo-wrapper">
+        <a class="main-nav__logo header-logo" href="index.html" aria-label="Мишка">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="header-logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип сайта Мишка">
+          </picture>
+        </a>
 
-      <button class="main-nav__toggle main-nav__toggle--off" type="button" aria-label="Меню"></button>
+        <button class="main-nav__toggle main-nav__toggle--off" type="button" aria-label="Меню"></button>
+      </div>
 
       <ul class="main-nav__site-list site-navigation">
         <li class="site-navigation__item">
@@ -33,10 +35,20 @@
 
       <ul class="main-nav__user-list user-navigation">
         <li class="user-navigation__item">
-          <a class="user-navigation__link" href="#">Поиск по сайту</a>
+          <a class="user-navigation__link" href="#">
+            <svg class="user-navigation__link-image" width="18" height="18">
+              <use xlink:href="img/symbols.svg#icon-search"></use>
+            </svg>
+            Поиск по сайту
+          </a>
         </li>
         <li class="user-navigation__item">
-          <a class="user-navigation__link" href="#">Корзина: пока пуста</a>
+          <a class="user-navigation__link" href="#">
+            <svg class="user-navigation__link-image" width="20" height="19">
+              <use xlink:href="img/symbols.svg#icon-cart"></use>
+            </svg>
+            Корзина: пока пуста
+          </a>
         </li>
       </ul>
 
@@ -165,7 +177,8 @@
 
         <button class="video__play" type="button" aria-label="Воспроизвести"></button>
 
-        <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
+          появляются наши товары.</p>
 
         <a class="video__button button" href="#">Сделать заказ</a>
       </section>

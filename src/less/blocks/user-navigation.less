@@ -1,0 +1,24 @@
+.user-navigation {
+  .list-reset();
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.user-navigation__item {
+  .ps-drop-shadow(@bg-color-separate; 100%; 90deg; 1px);
+}
+
+.user-navigation__link {
+  position: relative;
+  display: block;
+  padding: 27px 30px 28px 74px;
+}
+
+.user-navigation__link-image {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: @bg-color-icon;
+}

@@ -1,0 +1,42 @@
+.main-nav__logo-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 22px 30px;
+  .ps-drop-shadow(@bg-color-separate; 100%; 90deg; 1px);
+}
+
+.main-nav__toggle {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28px;
+    height: 3px;
+    background-color: @black;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.main-nav__text {
+  display: none;
+}
