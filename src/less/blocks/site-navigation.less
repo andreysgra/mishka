@@ -12,4 +12,13 @@
 .site-navigation__link {
   display: block;
   padding: 27px 30px 28px 74px;
+  color: @font-color-menu;
+
+  &[href]:hover {
+    color: @font-color-menu--hover;
+  }
+
+  &[href]:active {
+    color: @font-color-menu--active;
+  }
 }

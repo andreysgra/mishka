@@ -1,0 +1,23 @@
+.promo {
+  padding-top: 71px;
+  background-color: @bg-color-promo;
+  background-position: center -15%;
+  background-image: url("../img/hero-mobile@1x.jpg");
+  background-size: image-size("../img/hero-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  .ps-inner-shadow(@bg-color-separate; 100%; 90deg; 1px);
+
+  @media @retina {
+    background-image: url("../img/hero-mobile@2x.jpg");
+  }
+}
+
+.promo__slogan {
+  margin-top: 0;
+  margin-bottom: 122px;
+  padding: 0 30px;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+}

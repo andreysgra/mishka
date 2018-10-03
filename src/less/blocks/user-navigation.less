@@ -13,6 +13,15 @@
   position: relative;
   display: block;
   padding: 27px 30px 28px 74px;
+  color: @font-color-menu;
+
+  &[href]:hover {
+    color: @font-color-menu--hover;
+  }
+
+  &[href]:active {
+    color: @font-color-menu--active;
+  }
 }
 
 .user-navigation__link-image {
@@ -21,4 +30,13 @@
   top: 50%;
   transform: translateY(-50%);
   fill: @bg-color-icon;
+
+  .user-navigation__link:hover &,
+  .user-navigation__link:active & {
+    fill: @green-primary;
+  }
+
+  .user-navigation__link:active & {
+    fill-opacity: 0.3;
+  }
 }
