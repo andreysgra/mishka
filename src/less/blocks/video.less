@@ -1,7 +1,6 @@
 .video {
   box-sizing: border-box;
   padding-top: 20px;
-  padding-bottom: 18px;
   border: 1px solid #ececec;
 }
 
@@ -68,8 +67,16 @@
   }
 }
 
-.video__block-wrapper {
-  padding: 14px 34px;
+.video__description-wrapper {
+  padding: 14px 34px 32px;
+}
+
+.video:hover .video__description-wrapper {
+  .ps-drop-shadow(@black; 10%; 90deg; 6px; 0; 10px);
+}
+
+.video:active .video__description-wrapper {
+  .ps-drop-shadow(@black; 10%; 90deg; 3px; 0; 5px);
 }
 
 .video__description {

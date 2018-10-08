@@ -66,109 +66,138 @@
   </header>
 
   <main class="page-main">
-    <h1 class="page-main__title">Вязание на заказ</h1>
+    <header class="page-main__header">
+      <h1 class="page-main__title">Вязание на заказ</h1>
+    </header>
 
     <p class="page-main__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
       свяжемся с вами, чтобы уточнить детали.</p>
 
     <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
       <div class="form-feedback__block-wrapper">
-        <fieldset class="form-feedback__fieldset content-wrapper">
-          <legend class="form-feedback__legend">Тип</legend>
+        <fieldset class="form-feedback__fieldset form-feedback__fieldset--type content-wrapper">
+          <legend class="form-feedback__legend">
+            <span class="form-feedback__legend-text">Тип</span>
+          </legend>
 
-          <ul class="form-feedback__input-wrapper">
-            <li class="form-feedback__input-block">
+          <div class="form-feedback__content-wrapper form-feedback__content-wrapper--type">
+            <p class="form-feedback__input-wrapper form-feedback__input-wrapper--type">
               <input class="form-feedback__radio visually-hidden" type="radio" id="interior" name="type" value="1"
                 checked>
               <label class="form-feedback__label-radio" for="interior">Аксессуар для интерьера</label>
-            </li>
-            <li class="form-feedback__input-block">
+            </p>
+
+            <p class="form-feedback__input-wrapper form-feedback__input-wrapper--type">
               <input class="form-feedback__radio visually-hidden" type="radio" id="toy" value="2" name="type">
               <label class="form-feedback__label-radio" for="toy">Детская игрушка</label>
-            </li>
-          </ul>
+            </p>
+          </div>
         </fieldset>
       </div>
 
       <div class="form-feedback__block-wrapper">
-        <fieldset class="form-feedback__fieldset content-wrapper">
-          <legend class="form-feedback__legend">Цвет</legend>
+        <fieldset class="form-feedback__fieldset form-feedback__fieldset--color content-wrapper">
+          <legend class="form-feedback__legend">
+            <span class="form-feedback__legend-text">Цвет</span>
+          </legend>
 
-          <ul class="form-feedback__input-wrapper">
-            <li class="form-feedback__input-block">
+          <div class="form-feedback__content-wrapper form-feedback__content-wrapper--color">
+            <p class="form-feedback__input-wrapper form-feedback__input-wrapper--color">
               <input class="form-feedback__checkbox visually-hidden" type="checkbox" id="color-white" name="color-white"
                 checked>
               <label class="form-feedback__label-checkbox" for="color-white">Белый</label>
-            </li>
-            <li class="form-feedback__input-block">
+            </p>
+
+            <p class="form-feedback__input-wrapper form-feedback__input-wrapper--color">
               <input class="form-feedback__checkbox visually-hidden" type="checkbox" id="color-gray" name="color-gray"
                 checked>
               <label class="form-feedback__label-checkbox" for="color-gray">Серый</label>
-            </li>
-            <li class="form-feedback__input-block">
+            </p>
+
+            <p class="form-feedback__input-wrapper form-feedback__input-wrapper--color">
               <input class="form-feedback__checkbox visually-hidden" type="checkbox" id="color-tiffany" name="color-tiffany">
               <label class="form-feedback__label-checkbox" for="color-tiffany">«Тиффани»</label>
-            </li>
-            <li class="form-feedback__input-block">
+            </p>
+
+            <p class="form-feedback__input-wrapper form-feedback__input-wrapper--color">
               <input class="form-feedback__checkbox visually-hidden" type="checkbox" id="color-black" name="color-black">
               <label class="form-feedback__label-checkbox" for="color-black">Черный</label>
-            </li>
-            <li class="form-feedback__input-block">
+            </p>
+
+            <p class="form-feedback__input-wrapper form-feedback__input-wrapper--color">
               <input class="form-feedback__checkbox visually-hidden" type="checkbox" id="color-pink" name="color-pink">
               <label class="form-feedback__label-checkbox" for="color-pink">Розовый</label>
-            </li>
-            <li class="form-feedback__input-block">
+            </p>
+
+            <p class="form-feedback__input-wrapper form-feedback__input-wrapper--color">
               <input class="form-feedback__checkbox visually-hidden" type="checkbox" id="color-orange" name="color-orange">
               <label class="form-feedback__label-checkbox" for="color-orange">Оранжевый</label>
-            </li>
-          </ul>
+            </p>
+          </div>
         </fieldset>
       </div>
 
       <div class="form-feedback__block-wrapper">
-        <fieldset class="form-feedback__fieldset content-wrapper">
-          <legend class="form-feedback__legend">ФИО</legend>
+        <fieldset class="form-feedback__fieldset form-feedback__fieldset--name content-wrapper">
+          <legend class="form-feedback__legend">
+            <span class="form-feedback__legend-text">ФИО</span>
+          </legend>
 
-          <ul class="form-feedback__input-wrapper">
-            <li class="form-feedback__input-block">
+          <div class="form-feedback__content-wrapper">
+            <p class="form-feedback__input-wrapper form-feedback__input-wrapper--name">
               <label class="form-feedback__label" for="firstname">Имя:</label>
               <input class="form-feedback__input-text" type="text" id="firstname" name="firstname" placeholder="Введите ваше имя*">
-            </li>
-            <li class="form-feedback__input-block">
+            </p>
+
+            <p class="form-feedback__input-wrapper form-feedback__input-wrapper--name">
               <label class="form-feedback__label" for="lastname">Фамилия:</label>
               <input class="form-feedback__input-text" type="text" id="lastname" name="lastname" placeholder="Укажите фамилию*">
-            </li>
-            <li class="form-feedback__input-block">
+            </p>
+
+            <p class="form-feedback__input-wrapper form-feedback__input-wrapper--name">
               <label class="form-feedback__label" for="middlename">Отчество:</label>
               <input class="form-feedback__input-text" type="text" id="middlename" name="middlename" placeholder="Отчество, если желаете">
-            </li>
-          </ul>
+            </p>
+          </div>
         </fieldset>
       </div>
 
       <div class="form-feedback__block-wrapper">
-        <fieldset class="form-feedback__fieldset content-wrapper">
-          <ul class="form-feedback__input-wrapper">
-            <li class="form-feedback__input-block">
-              <label class="form-feedback__legend" for="phone">Тел</label>
+        <fieldset class="form-feedback__fieldset form-feedback__fieldset--contact content-wrapper">
+          <div class="form-feedback__content-wrapper">
+            <p class="form-feedback__input-wrapper form-feedback__input-wrapper--contact">
+              <label class="form-feedback__legend form-feedback__legend--contact" for="phone">
+                <span class="form-feedback__legend-text">Тел</span>
+              </label>
               <input class="form-feedback__input-text" type="tel" id="phone" name="phone" placeholder="+7 ХХХ ХХ ХХ*">
-            </li>
-            <li class="form-feedback__input-block">
-              <label class="form-feedback__legend" for="email">E-mail</label>
+              <svg class="form-feedback__input-image form-feedback__input-image--phone" width="25" height="24">
+                <use xlink:href="img/symbols.svg#icon-phone"></use>
+              </svg>
+            </p>
+
+            <p class="form-feedback__input-wrapper form-feedback__input-wrapper--contact">
+              <label class="form-feedback__legend form-feedback__legend--contact" for="email">
+                <span class="form-feedback__legend-text">E-mail</span>
+              </label>
               <input class="form-feedback__input-text" type="email" id="email" name="email" placeholder="Ваш Email*">
-            </li>
-          </ul>
+              <svg class="form-feedback__input-image form-feedback__input-image--email" width="32" height="32">
+                <use xlink:href="img/symbols.svg#icon-mail"></use>
+              </svg>
+            </p>
+          </div>
         </fieldset>
       </div>
 
       <div class="form-feedback__block-wrapper">
-        <fieldset class="form-feedback__fieldset content-wrapper">
-          <legend class="form-feedback__legend">Доп</legend>
+        <fieldset class="form-feedback__fieldset form-feedback__fieldset--message content-wrapper">
+          <legend class="form-feedback__legend">
+            <span class="form-feedback__legend-text">Доп</span>
+          </legend>
 
           <textarea class="form-feedback__input-text form-feedback__textarea" name="message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
 
-        <div class="form-feedback__submit-wrapper">
+        <div class="form-feedback__submit-wrapper content-wrapper">
           <p class="form-feedback__notification">*Поля обязательны для заполнения</p>
 
           <button class="form-feedback__button button" type="submit">Отправить заказ</button>
