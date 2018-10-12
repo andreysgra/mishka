@@ -17,6 +17,7 @@
     justify-content: flex-start;
     padding: 21px 50px;
     width: 48.18%;
+    background-color: @bg-color-body;
   }
 }
 
@@ -61,11 +62,17 @@
   margin: 0;
   padding: 18px 50px;
   text-align: right;
+  background-color: @gray-secondary;
 
   @media @tablet {
     display: block;
     order: 2;
     width: 48%;
-    background-color: @bg-color-promo;
+  }
+
+  &--index {
+    @media @tablet {
+      background-color: @bg-color-promo;
+    }
   }
 }
