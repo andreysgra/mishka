@@ -1,17 +1,25 @@
 .site-navigation {
+  box-sizing: border-box;
   .list-reset();
 
   font-size: 17px;
   font-weight: 700;
-}
 
-.site-navigation__item {
-  .ps-drop-shadow(@bg-color-separate; 100%; 90deg; 1px);
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+    order: 1;
+    width: 52%;
+    padding-left: 50px;
+    font-size: 15px;
+    background-color: @bg-color-promo;
+  }
 }
 
 .site-navigation__link {
   display: block;
-  padding: 27px 30px 28px 74px;
+  padding: 27px 30px 27px 74px;
+  border-bottom: 1px solid @bg-color-separate;
   color: @font-color-menu;
 
   &[href]:hover {
@@ -20,5 +28,10 @@
 
   &[href]:active {
     color: @font-color-menu--active;
+  }
+
+  @media @tablet {
+    padding: 18px 37px 18px 0;
+    border-bottom: none;
   }
 }

@@ -1,5 +1,17 @@
 .promo-list {
   .list-reset();
+
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.promo-list__item {
+  @media @tablet {
+    width: 50%;
+  }
 }
 
 .promo-list__link {
@@ -9,6 +21,12 @@
   font-size: 19px;
   font-weight: 700;
   color: @white;
+
+  @media @tablet {
+    padding: 28px 35px 31px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &::before {
     content: "";
@@ -87,6 +105,10 @@
       height: 60px;
       background-image: url("../img/icon-toy.svg");
       background-size: 60px 60px;
+
+      @media @tablet {
+        right: 34px;
+      }
     }
   }
 }

@@ -1,7 +1,17 @@
 .social-links {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   .list-reset();
+
+  padding-bottom: 19px;
+  border-bottom: 1px solid @bg-color-separate;
+
+  @media @tablet {
+    padding-bottom: 0;
+    width: 300px;
+    border-bottom: 0;
+  }
 }
 
 .social-links__link {

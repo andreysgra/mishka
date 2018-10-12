@@ -3,6 +3,22 @@
   padding-top: 17px;
   padding-bottom: 51px;
 
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-bottom: 127px;
+    background-image: url("../img/review@1x.jpg");
+    background-size: image-size("../img/review@1x.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+
+    @media @retina {
+      background-image: url("../img/review@2x.jpg");
+    }
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -11,14 +27,26 @@
     bottom: 0;
     height: 6px;
     background-image: url("../img/bg-zigzag-line.svg");
-    background-size: auto 6px;
-    background-position-x: -6px;
+    background-size: contain;
+    background-position-x: -5px;
+    background-repeat: repeat-x;
+
+    @media @tablet {
+      height: 15px;
+      background-position-x: -14px;
+    }
   }
 }
 
 .reviews__title {
   margin-top: 4px;
   margin-bottom: 4px;
+
+  @media @tablet {
+    margin-top: 16px;
+    margin-bottom: 28px;
+    max-width: 300px;
+  }
 }
 
 .reviews__content {
@@ -26,10 +54,20 @@
   padding-top: 4px;
   padding-bottom: 4px;
   line-height: 30px;
+
+  @media @tablet {
+    order: 1;
+  }
 }
 
 .reviews__text {
-  margin-bottom: 24px;
+  margin-top: 17px;
+  margin-bottom: 22px;
+
+  @media @tablet {
+    margin-bottom: 58px;
+    font-size: 17px;
+  }
 }
 
 .reviews__author {
@@ -43,6 +81,12 @@
   display: block;
   font-weight: 700;
   color: @font-color-heading;
+
+  @media @tablet {
+    margin-bottom: 2px;
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .reviews__author-email {
@@ -52,8 +96,16 @@
 .reviews__navigation {
   display: flex;
   justify-content: center;
-  margin-top: 25px;
-  margin-bottom: 38px;
+  margin: 25px auto 38px;
+  max-width: 320px;
+
+  @media @tablet {
+    position: absolute;
+    right: 50px;
+    bottom: 133px;
+    margin: 0;
+    width: 175px;
+  }
 }
 
 .reviews__nav-button {
@@ -61,11 +113,14 @@
   padding: 0;
   box-sizing: border-box;
   width: 50%;
-  max-width: 200px;
   height: 52px;
   border: 1px solid @bg-color-separate;
   background-color: transparent;
   cursor: pointer;
+
+  @media @tablet {
+    border: 0;
+  }
 
   &--prev {
     &::after {
@@ -99,5 +154,13 @@
 
   &:active::after {
     opacity: 0.3;
+  }
+}
+
+.reviews__button {
+  @media @tablet {
+    margin-top: 18px;
+    margin-right: 0;
+    width: 175px;
   }
 }

@@ -35,15 +35,15 @@
 
       <ul class="main-nav__user-list user-navigation">
         <li class="user-navigation__item">
-          <a class="user-navigation__link" href="#">
+          <a class="user-navigation__link user-navigation__link--search" href="#">
             <svg class="user-navigation__link-image" width="18" height="18">
               <use xlink:href="img/symbols.svg#icon-search"></use>
             </svg>
-            Поиск по сайту
+            <span class="user-navigation__link-text">Поиск по сайту</span>
           </a>
         </li>
         <li class="user-navigation__item">
-          <a class="user-navigation__link" href="#">
+          <a class="user-navigation__link user-navigation__link--cart" href="#">
             <svg class="user-navigation__link-image" width="20" height="19">
               <use xlink:href="img/symbols.svg#icon-cart"></use>
             </svg>
@@ -88,9 +88,10 @@
     </section>
 
     <section class="week-goods content-wrapper">
-      <h2 class="week-goods__title section-title">Вязаные корзинки</h2>
-
-      <p class="week-goods__mark">Товар недели</p>
+      <header class="week-goods__header">
+        <h2 class="week-goods__title section-title">Вязаные корзинки</h2>
+        <p class="week-goods__mark">Товар недели</p>
+      </header>
 
       <div class="week-goods__content-wrapper">
         <p class="week-goods__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и
@@ -176,8 +177,7 @@
           <dt class="contacts__list-term">адрес:</dt>
           <dd class="contacts__list-description">
             г. Санкт-Петербург,<br>
-            ул. Большая<br>
-            Конюшенная,<br>
+            ул. Большая Конюшенная,<br>
             д. 19/8, офис 101</dd>
         </dl>
       </div>
@@ -204,7 +204,7 @@
   </main>
 
   <footer class="page-footer">
-    <div class="content-wrapper">
+    <div class="page-footer__content-wrapper content-wrapper">
       <a class="page-footer__logo footer-logo" aria-label="Мишка">
         <svg class="footer-logo__image" width="102" height="34">
           <use xlink:href="img/symbols.svg#logo-footer"></use>
