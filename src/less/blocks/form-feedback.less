@@ -1,15 +1,38 @@
 .form-feedback {
   padding-top: 10px;
   padding-bottom: 55px;
+
+  @media @tablet {
+    padding-top: 7px;
+    padding-bottom: 44px;
+  }
+}
+
+.form-feedback__block-wrapper {
+  &--gray {
+    @media @tablet {
+      background-color: @gray-secondary;
+    }
+  }
 }
 
 .form-feedback__fieldset {
+  position: relative;
   padding-top: 21px;
   padding-bottom: 21px;
   border: 0;
 
+  @media @tablet {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   &--type {
     margin-bottom: 11px;
+
+    @media @tablet {
+      margin-bottom: 0;
+    }
   }
 
   &--color {
@@ -27,7 +50,7 @@
   }
 
   &--message {
-    padding-bottom: 10px;
+    padding-bottom: 16px;
   }
 }
 
@@ -41,8 +64,26 @@
   color: @green-primary;
   text-transform: uppercase;
 
-  &--contact {
+  @media @tablet {
+    position: absolute;
+    left: 50px;
+    top: 66px;
+    width: 100px;
+  }
+
+  &--phone,
+  &--email {
     margin-bottom: 6px;
+
+    @media @tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &--email {
+    @media @tablet {
+      top: 143px;
+    }
   }
 }
 
@@ -56,18 +97,22 @@
     margin-left: 25px;
     height: 1px;
     background-color: @green-primary;
+
+    @media @tablet {
+      content: none;
+    }
   }
 }
 
 .form-feedback__content-wrapper {
-  &--type {
-    display: flex;
-    flex-wrap: wrap;
+  @media @tablet {
+    padding-left: 167px;
   }
 
   &--color {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -78,15 +123,38 @@
 
   &--type {
     min-width: 260px;
+
+    &:not(:last-child) {
+      @media @tablet {
+        margin-bottom: 23px;
+      }
+    }
   }
 
   &--color {
     margin-bottom: 19px;
     min-width: 240px;
+
+    @media @tablet {
+      margin-bottom: 24px;
+    }
+
+    &:last-child,
+    &:nth-last-child(2) {
+      @media @tablet {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &--name {
     margin-bottom: 22px;
+
+    @media @tablet {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -95,6 +163,10 @@
 
   &--contact {
     margin-bottom: 32px;
+
+    @media @tablet {
+      margin-bottom: 24px;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -109,10 +181,19 @@
   font-weight: 700;
   line-height: 18px;
   color: @font-color-label;
+
+  @media @tablet {
+    font-size: 19px;
+    line-height: 19px;
+  }
 }
 
 .form-feedback__label {
   display: block;
+
+  @media @tablet {
+    padding-right: 27px;
+  }
 }
 
 .form-feedback__label-radio {
@@ -121,6 +202,12 @@
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 62px;
+
+  @media @tablet {
+    padding-top: 16px;
+    padding-bottom: 17px;
+    padding-left: 80px;
+  }
 
   &::before {
     content: "";
@@ -133,6 +220,12 @@
     border-style: solid;
     border-color: @border-color-button;
     border-radius: 50%;
+
+    @media @tablet {
+      top: 0;
+      width: 48px;
+      height: 48px;
+    }
   }
 
   &::after {
@@ -145,6 +238,12 @@
     width: 16px;
     height: 16px;
     background-color: @border-color-input--hover;
+
+    @media @tablet {
+      left: 15px;
+      width: 22px;
+      height: 22px;
+    }
   }
 
   &:hover::before {
@@ -168,6 +267,12 @@
   padding-bottom: 12px;
   padding-left: 62px;
 
+  @media @tablet {
+    padding-top: 16px;
+    padding-bottom: 17px;
+    padding-left: 80px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -178,6 +283,12 @@
     border-width: 2px;
     border-style: solid;
     border-color: @border-color-button;
+
+    @media @tablet {
+      top: 0;
+      width: 50px;
+      height: 48px;
+    }
   }
 
   &::after {
@@ -191,6 +302,12 @@
     height: 9px;
     border-left: 2px solid @border-color-button;
     border-bottom: 2px solid @border-color-button;
+
+    @media @tablet {
+      left: 12px;
+      width: 29px;
+      height: 14px;
+    }
   }
 
   &:hover::before {
@@ -208,19 +325,31 @@
 
 .form-feedback__input-image {
   position: absolute;
-  top: 33px;
+  top: 11px;
   fill-opacity: 0.2;
+
+  @media @tablet {
+    top: 12px;
+  }
 
   &--phone {
     right: 8px;
     width: 25px;
     height: 24px;
+
+    @media @tablet {
+      right: 26px;
+    }
   }
 
   &--email {
     right: 4px;
     width: 32px;
     height: 32px;
+
+    @media @tablet {
+      right: 22px;
+    }
   }
 }
 
@@ -235,7 +364,14 @@
   font-family: inherit;
   font-size: 17px;
   line-height: 18px;
+  background-color: transparent;
   outline: none;
+
+  @media @tablet {
+    padding: 12px 16px;
+    font-size: 19px;
+    line-height: 19px;
+  }
 
   &::placeholder {
     color: fade(@font-color-base, 30%);
@@ -252,20 +388,47 @@
   }
 }
 
+.form-feedback__submit-wrapper {
+  @media @tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+}
+
 .form-feedback__textarea {
+  display: block;
   margin-top: 3px;
   padding: 15px 14px;
   min-height: 142px;
   border-width: 2px;
   resize: vertical;
+
+  @media @tablet {
+    margin-top: 0;
+  }
 }
 
 .form-feedback__notification {
   margin-top: 0;
   font-size: 14px;
   line-height: 16px;
+
+  @media @tablet {
+    order: 1;
+    margin-bottom: 0;
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .form-feedback__button {
   margin-top: 31px;
+
+  @media @tablet {
+    margin: 0;
+    width: 230px;
+  }
 }

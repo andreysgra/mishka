@@ -1,4 +1,9 @@
 .main-nav {
+  box-sizing: border-box;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 1150px;
+
   @media @tablet {
     display: flex;
     flex-wrap: wrap;
@@ -62,17 +67,10 @@
   margin: 0;
   padding: 18px 50px;
   text-align: right;
-  background-color: @gray-secondary;
 
   @media @tablet {
     display: block;
     order: 2;
     width: 48%;
-  }
-
-  &--index {
-    @media @tablet {
-      background-color: @bg-color-promo;
-    }
   }
 }
