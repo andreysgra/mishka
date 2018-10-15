@@ -24,6 +24,12 @@
     padding: 21px 50px;
     background-color: @bg-color-body;
   }
+
+  @media @desktop {
+    flex-grow: 0;
+    order: 1;
+    padding: 7px 0 6px;
+  }
 }
 
 .main-nav__toggle {
@@ -61,6 +67,31 @@
   }
 }
 
+.main-nav__site-list {
+  @media @tablet {
+    order: 1;
+  }
+
+  @media @desktop {
+    order: 0;
+  }
+}
+
+.main-nav__user-list {
+  @media @desktop {
+    order: 2;
+  }
+}
+
+.main-nav__stock-list {
+  display: none;
+
+  @media @desktop {
+    display: flex;
+    order: 3;
+  }
+}
+
 .main-nav__text {
   display: none;
   box-sizing: border-box;
@@ -72,5 +103,11 @@
     display: block;
     order: 2;
     width: 48%;
+  }
+
+  @media @desktop {
+    order: 4;
+    margin-left: auto;
+    width: 500px;
   }
 }

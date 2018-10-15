@@ -8,21 +8,35 @@
     padding-bottom: 32px;
   }
 
+  @media @desktop {
+    padding-top: 119px;
+    padding-bottom: 61px;
+  }
+
   &::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 6px;
+    height: 7px;
     background-image: url("../img/bg-zigzag-line.svg");
-    background-size: contain;
-    background-position-x: -5px;
+    background-size: 320px 7px;
+    background-position-x: -8px;
     background-repeat: repeat-x;
 
     @media @tablet {
-      height: 15px;
-      background-position-x: -14px;
+      height: 17px;
+      background-size: 768px 17px;
+      background-position-x: -20px;
+    }
+
+    @media @desktop {
+      left: 50px;
+      right: 50px;
+      height: 23px;
+      background-size: 1050px 21px;
+      background-position-x: -25px;
     }
   }
 }
@@ -35,6 +49,10 @@
     margin-bottom: 28px;
     padding: 5px 0;
   }
+
+  @media @desktop {
+    padding-left: 19px;
+  }
 }
 
 .week-goods__title {
@@ -44,6 +62,11 @@
   @media @tablet {
     margin: 0;
     max-width: 500px;
+  }
+
+  @media @desktop {
+    order: 1;
+    max-width: none;
   }
 }
 
@@ -64,6 +87,11 @@
     line-height: 17px;
     text-align: center;
   }
+
+  @media @desktop {
+    margin-left: 0;
+    margin-right: 25px;
+  }
 }
 
 .week-goods__content-wrapper {
@@ -74,6 +102,11 @@
   @media @tablet {
     padding-top: 16px;
     padding-right: 378px;
+  }
+
+  @media @desktop {
+    padding-left: 175px;
+    padding-right: 584px;
   }
 }
 
@@ -87,6 +120,10 @@
     font-size: 17px;
     line-height: 30px;
   }
+
+  @media @desktop {
+    margin-bottom: 47px;
+  }
 }
 
 .week-goods__table {
@@ -94,6 +131,10 @@
 
   @media @tablet {
     margin-bottom: 57px;
+  }
+
+  @media @desktop {
+    margin-bottom: 110px;
   }
 }
 
@@ -111,6 +152,13 @@
     width: 333px;
     height: 404px;
   }
+
+  @media @desktop {
+    z-index: -1;
+    top: -143px;
+    width: 525px;
+    height: 636px;
+  }
 }
 
 .week-goods__image {
@@ -120,6 +168,10 @@
 
   @media @tablet {
     width: 333px;
+  }
+
+  @media @desktop {
+    width: 525px;
   }
 }
 
@@ -133,5 +185,11 @@
   @media @tablet {
     margin-bottom: 34px;
     font-size: 20px;
+  }
+}
+
+.week-goods__button {
+  @media @desktop {
+    margin: 0;
   }
 }
