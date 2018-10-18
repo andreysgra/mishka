@@ -1,5 +1,7 @@
 .promo {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
   background-color: @bg-color-promo;
 
   &::after {
@@ -12,9 +14,6 @@
 
     @media @tablet {
       content: "";
-      // height: 11.5px;
-      // background-size: auto 23px;
-      // background-position-x: -4px;
       bottom: -12px;
       height: 24px;
       background-size: 768px 24px;
@@ -22,10 +21,6 @@
     }
 
     @media @desktop {
-      // bottom: -4px;
-      // height: 22px;
-      // background-size: auto 37px;
-      // background-position-x: -6px;
       bottom: -17px;
       height: 34px;
       background-size: auto 37px;
@@ -35,11 +30,12 @@
 }
 
 .promo__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   box-sizing: border-box;
-  margin: 0 auto;
-  min-width: 320px;
-  max-width: 1150px;
-  padding-top: 71px;
+  padding: 71px 0 0;
+  min-height: 489px;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-size: image-size("../img/hero-mobile@1x.jpg");
   background-position: center -15%;
@@ -52,8 +48,8 @@
   @media @tablet {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 93px 50px 0;
+    min-height: 685px;
+    padding-top: 93px;
     background-image: url("../img/hero-tablet@1x.jpg");
     background-size: image-size("../img/hero-tablet@1x.jpg");
     background-position: center bottom;
@@ -74,10 +70,12 @@
   }
 }
 
-.promo__slogan {
+.promo__title {
+  box-sizing: border-box;
   margin-top: 0;
-  margin-bottom: 122px;
+  margin-bottom: auto;
   padding: 0 30px;
+  width: 100%;
   font-size: 27px;
   font-weight: 700;
   line-height: 30px;
@@ -85,14 +83,12 @@
   text-align: center;
 
   @media @tablet {
-    margin-bottom: 373px;
     padding: 0;
     font-size: 43px;
     line-height: 50px;
   }
 
   @media @desktop {
-    margin-bottom: 359px;
     padding: 0 100px;
     font-size: 53px;
     line-height: 57px;

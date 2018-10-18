@@ -6,6 +6,10 @@
   @media @tablet {
     width: 668px;
   }
+
+  @media @desktop {
+    width: 316px;
+  }
 }
 
 .card-product__link-image {
@@ -15,6 +19,10 @@
 
   @media @tablet {
     width: 50%;
+  }
+
+  @media @desktop {
+    width: 100%;
   }
 }
 
@@ -26,6 +34,11 @@
   @media @tablet {
     width: 334px;
     height: 334px;
+  }
+
+  @media @desktop {
+    width: 316px;
+    height: 462px;
   }
 }
 
@@ -40,6 +53,12 @@
     flex-direction: column;
     padding-top: 25px;
     width: 50%;
+  }
+
+  @media @desktop {
+    padding-bottom: 9px;
+    width: 100%;
+    min-height: 197px;
   }
 }
 
@@ -70,6 +89,7 @@
   line-height: 30px;
 
   @media @tablet {
+    margin-bottom: 0;
     font-size: 15px;
   }
 }
@@ -78,16 +98,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 7px;
+  padding: 21px 0 16px;
   border-top: 1px solid @bg-color-separate;
 
   @media @tablet {
     margin-top: auto;
-    padding: 3px 4px 0;
+    padding: 22px 4px 15px;
+  }
+
+  @media @desktop {
+    padding: 22px 5px 17px 0;
   }
 }
 
 .card-product__price {
+  margin: 0;
   font-weight: 700;
   color: @font-color-heading;
 
@@ -105,4 +130,13 @@
   width: 20px;
   height: 19px;
   fill: @bg-color-icon;
+
+  .card-product__button:hover &,
+  .card-product__button:active & {
+    fill: @green-primary;
+  }
+
+  .card-product__button:active & {
+    fill-opacity: 0.3;
+  }
 }
