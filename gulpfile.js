@@ -6,7 +6,6 @@ const imagemin = require("gulp-imagemin");
 const rename = require("gulp-rename");
 const del = require("del");
 const concat = require("gulp-concat");
-const run = require("run-sequence");
 const browserSync = require("browser-sync").create();
 
 let rootDirs = {
@@ -209,24 +208,26 @@ gulp.task("serve", function() {
     notify: false
   });
 
-  gulp.watch(projectDirs.src.style + "**/*.less", ["style"]);
-  gulp.watch(projectDirs.src.root + "*.html", ["html"]);
-  gulp.watch(projectDirs.src.js + "*.js", ["js"]);
+  gulp.watch(projectDirs.src.style + "**/*.less", gulp.series("style"));
+  gulp.watch(projectDirs.src.root + "*.html", gulp.series("html"));
+  gulp.watch(projectDirs.src.js + "*.js", gulp.series("js"));
 });
 
 // Сборка проекта
-gulp.task("build", function(callback) {
-  run(
+gulp.task(
+  "build",
+  gulp.series(
     "clean",
-    "copy:fonts",
-    "copy:js",
-    "html",
-    "style",
-    "js",
-    "images",
-    "webp",
+    gulp.parallel(
+      "copy:fonts",
+      "copy:js",
+      "html",
+      "style",
+      "js",
+      "images",
+      "webp"
+    ),
     "sprite",
-    "clean:icons",
-    callback
-  );
-});
+    "clean:icons"
+  )
+);
