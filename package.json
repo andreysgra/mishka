@@ -21,14 +21,14 @@
   },
   "homepage": "https://github.com/andreysgra/mishka#readme",
   "devDependencies": {
-    "autoprefixer": "^9.1.5",
+    "autoprefixer": "^9.2.1",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.24.7",
+    "browser-sync": "^2.26.3",
     "css-mqpacker": "^7.0.0",
     "del": "^3.0.0",
-    "gh-pages": "^2.0.0",
-    "gulp": "^3.9.1",
+    "gh-pages": "^2.0.1",
+    "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
@@ -44,13 +44,12 @@
     "gulp-uglify": "^3.0.1",
     "imagemin-jpegoptim": "^5.2.0",
     "imagemin-webp": "^4.1.0",
-    "run-sequence": "^2.2.1",
-    "stylelint": "^9.5.0",
+    "stylelint": "^9.6.0",
     "stylelint-config-standard": "^18.2.0"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "picturefill": "^3.0.2",
+    "picturefill": "^3.0.3",
     "svg4everybody": "^2.1.9"
   },
   "browserslist": [

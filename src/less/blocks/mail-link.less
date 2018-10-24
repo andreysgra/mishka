@@ -1,0 +1,19 @@
+.mail-link {
+  padding-bottom: 4px;
+  line-height: 30px;
+  border-bottom: 1px solid @border-color-input--hover;
+
+  &:hover {
+    color: @font-color-mail;
+    border-bottom-color: @font-color-mail;
+  }
+
+  &:active {
+    color: fade(@font-color-mail, 30%);
+    border-bottom-color: fade(@font-color-mail, 30%);
+  }
+
+  @media @tablet {
+    padding-bottom: 3px;
+  }
+}
