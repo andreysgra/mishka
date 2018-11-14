@@ -1,12 +1,16 @@
 // Photoshop Drop Shadow
 .ps-drop-shadow(@color: #000000; @opacity: 0%; @angel: 0deg; @distance: 0; @spread: 0; @size: 0; @inner: false) {
-  @radian: (180 - unit(@angel)) * (pi() / 180);              // перевод градусов в радианы
+  // перевод градусов в радианы
+  @radian: (180 - unit(@angel)) * (pi() / 180);
 
-  @offset-x: unit(round(cos(@radian) * @distance), px);      // сдвиг по оси X
-  @offset-y: unit(round(sin(@radian) * @distance), px);      // сдвиг по оси Y
+  // сдвиг по оси X
+  @offset-x: unit(round(cos(@radian) * @distance), px);
+  // сдвиг по оси Y
+  @offset-y: unit(round(sin(@radian) * @distance), px);
 
+  // размытие
   .getBlurRadius() when (@size > 0) {
-    @blur-radius: unit(@size - @size * @spread / @size, px); // размытие
+    @blur-radius: unit(@size - @size * @spread / @size, px);
   }
 
   .getBlurRadius() when (default()) {
