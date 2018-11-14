@@ -65,6 +65,27 @@
   @media @tablet {
     display: none;
   }
+
+  &--off {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 2px;
+      box-shadow: 0 6px 0 0 @black, 0 12px 0 0 @black;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.main-nav--no-js .main-nav__toggle {
+  display: none;
 }
 
 .main-nav__site-list {
